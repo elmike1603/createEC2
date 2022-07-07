@@ -56,7 +56,7 @@ resource "aws_instance" "ansible" {
   # count         = 1 
   vpc_security_group_ids = ["${aws_security_group.allow_SSH.id}"]
   tags = {
-    "Name" = "Linux-Node"
+    "Name" = "ansible"
     "ENV"  = "Dev"
   }
 
@@ -73,7 +73,7 @@ resource "aws_instance" "webserver" {
   key_name               = aws_key_pair.deployer1.key_name
   vpc_security_group_ids = ["${aws_security_group.allow_SSH.id}"]
   tags = {
-    "Name" = "UBUNTU-Node"
+    "Name" = "webserver"
     "ENV"  = "Dev"
   }
   # Type of connection to be established
