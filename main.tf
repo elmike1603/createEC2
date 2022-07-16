@@ -66,7 +66,7 @@ resource "aws_instance" "jenkins-server" {
   instance_type          = "t2.micro"
   key_name               = aws_key_pair.deployer1.key_name
   vpc_security_group_ids = ["${aws_security_group.allow_SSH.id}"]
-  user_data       	 = "${file("install_jenkins.sh")}"
+  user_data = file("install_jenkins.sh")
   tags = {
     "Name" = "Jenkin-Server"
     "ENV"  = "Dev"
