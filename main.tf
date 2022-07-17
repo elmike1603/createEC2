@@ -68,7 +68,7 @@ resource "aws_instance" "jenkins-server" {
   vpc_security_group_ids = ["${aws_security_group.allow_SSH.id}"]
   user_data = file("install_jenkins.sh")
   tags = {
-    "Name" = "Jenkin-Server"
+    "Name" = "Jenkins-Server"
     "ENV"  = "Dev"
   }
   # Type of connection to be established
