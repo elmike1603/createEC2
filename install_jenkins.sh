@@ -15,3 +15,6 @@ sudo apt update
 sudo apt install software-properties-common
 sudo add-apt-repository --yes --update ppa:ansible/ansible
 sudo apt install -y ansible
+#Install Git and Maven
+sudo apt install -y maven
+sudo apt install -y git
