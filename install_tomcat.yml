@@ -59,4 +59,7 @@
         state: started
         enabled: yes
         daemon_reload: yes
+
+    - name: Start Tomcat 10 
+      command:sudo sh /opt/tomcat10/bin/startup.sh
 ﻿
